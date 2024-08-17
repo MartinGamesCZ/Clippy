@@ -1,7 +1,7 @@
-use crossclip::{Clipboard, SystemClipboard};
+mod clipboard;
+
 use std::env;
 use std::io::{self, IsTerminal, Read};
-use std::{thread, time};
 
 // Main function
 fn main() {
@@ -62,43 +62,14 @@ fn cmd_copy() {
     }
 
     // Copy the text to the clipboard
-    copy_text(text).unwrap();
+    clipboard::copy_to_clipboard(text).unwrap();
 }
 
 // Paste command
 fn cmd_paste() {
     // Get the text from the clipboard
-    let text = get_text().unwrap();
+    let text = clipboard::get_from_clipboard().unwrap();
 
     // Print the text to the StdOut
     print!("{}", text);
-}
-
-// Function to copy text to the clipboard
-fn copy_text(text: String) -> Result<(), Box<dyn std::error::Error>> {
-    // Create a new SystemClipboard instance
-    let clipboard = SystemClipboard::new()?;
-
-    // Copy the text to the clipboard
-    clipboard.set_string_contents(text)?;
-    println!("Text copied to clipboard");
-
-    // Sleep for 100 milliseconds - needed for the text to be copied
-    // TODO: Find a better way to wait for the text to be copied
-    thread::sleep(time::Duration::from_millis(100));
-
-    // Resolve the function with no errors
-    return Ok(());
-}
-
-// Function to get text from the clipboard
-fn get_text() -> Result<String, Box<dyn std::error::Error>> {
-    // Create a new SystemClipboard instance
-    let clipboard = SystemClipboard::new()?;
-
-    // Get the text from the clipboard
-    let text = clipboard.get_string_contents()?;
-
-    // Resolve the function with the text
-    return Ok(text);
 }
