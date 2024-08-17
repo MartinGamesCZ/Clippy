@@ -58,6 +58,18 @@ ls -l $(clippy)
 
 This will list the content of the path in the clipboard.
 
+Or you can paste it into a file:
+
+```bash
+# Using paste command
+clippy paste > file.txt
+
+# You can also use the command without the paste argument
+clippy > file.txt
+```
+
+This will paste the content of the clipboard into the file.
+
 ## Donations
 
 If you would like to donate or support the project, please contact me.
