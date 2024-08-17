@@ -14,6 +14,8 @@ Clippy can be used using the command `clippy`.
 ### Commands
 - `clippy copy` - Copy the piped text to the clipboard.
 - `clippy paste` - Paste the clipboard content to the terminal / pipe into another process/file.
+- `clippy help` - Show help message (list of commands).
+- `clippy` - Default command, action will be determined by the available pipes.
 
 ### Pipes
 You can pipe clippy to other files or processes.
