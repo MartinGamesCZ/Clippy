@@ -1,5 +1,5 @@
 use crate::commands;
-use std::io;
+use std::io::{self, IsTerminal};
 
 // Default command
 pub fn run() {
