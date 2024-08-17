@@ -72,9 +72,10 @@ clippy > file.txt
 
 This will paste the content of the clipboard into the file.
 
-## Donations
+## Support us
 
-If you would like to donate or support the project, please contact me.
+This project is free and will always be. If you want to support us, you can donate to the project or give us a star on GitHub.
+If you want to donate, contact me.
 
 ## Maintainers
 - [Martin Petr](https://github.com/MartinGamesCZ)
