@@ -20,6 +20,7 @@ fn main() {
     match args[0].as_str() {
         "copy" => commands::copy::run(),
         "paste" => commands::paste::run(),
+        "help" => commands::help::run(),
         _ => commands::default::run(),
     }
 }
