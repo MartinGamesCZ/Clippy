@@ -1,0 +1,11 @@
+[package]
+name = "clippy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+crossclip = "0.7.1"
+
+[package.metadata.deb]
+maintainer = "Martin Petr <martinpetrnp@gmail.com>"
+copyright = "2024, 2024 <martinpetrnp@gmail.com>"
