@@ -76,3 +76,7 @@ If you would like to donate or support the project, please contact me.
 
 ## Maintainers
 - [Martin Petr](https://github.com/MartinGamesCZ)
+
+## License
+
+Use this tool as you wish, for free, even commercially. Just don't claim it as your own and don't blame me for anything. If you want to support me or the project, you can donate.
