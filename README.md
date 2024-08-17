@@ -3,7 +3,7 @@ Linux CLI tool for managing clipboard.
 
 ## Installation
 
-1. Get the latest `.deb` package from the [releases](/MartinGamesCZ/Clippy/releases) page.
+1. Get the latest `.deb` package from the [releases](https://github.com/MartinGamesCZ/Clippy/releases) page.
 2. Install the package using `sudo dpkg -i path_to_clippy.deb`.
 3. You are now ready to use Clippy.
 
