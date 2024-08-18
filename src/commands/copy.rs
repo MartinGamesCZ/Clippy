@@ -1,4 +1,4 @@
-use crate::clipboard;
+use crate::{clipboard, data_store};
 
 use std::io::{self, Read};
 
@@ -27,5 +27,8 @@ pub fn run() {
     }
 
     // Copy the text to the clipboard
-    clipboard::copy_to_clipboard(text).unwrap();
+    clipboard::copy_to_clipboard(text.clone()).unwrap();
+
+    // Save the text to the history
+    data_store::write_history(text);
 }

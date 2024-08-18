@@ -3,9 +3,13 @@ use args::get_args;
 mod args;
 mod clipboard;
 mod commands;
+mod data_store;
 
 // Main function
 fn main() {
+    // Initialize the data store
+    data_store::init();
+
     // Get the command line arguments
     let args = get_args();
 
@@ -21,6 +25,7 @@ fn main() {
         "copy" => commands::copy::run(),
         "paste" => commands::paste::run(),
         "help" => commands::help::run(),
+        "history" => commands::history::run(),
         _ => commands::default::run(),
     }
 }
